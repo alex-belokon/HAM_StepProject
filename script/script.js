@@ -211,17 +211,13 @@ $(document).ready(function () {
       elems = $("<div></div>", { class: "item" }).append(
         $("<img>", { src: `img/gallery/loadMoreImg/${getRandomInt(1, 7)}.png` })
       );
-      $grid.append(elems).masonry("appended", elems);
-      elems = $("<div></div>", { class: "item" }).append(
-        $("<img>", { src: `img/gallery/loadMoreImg/${getRandomInt(1, 7)}.png` })
-      );
+      
       $grid.append(elems).masonry("appended", elems);
 
-      $("#gallery-btn-plus").show();
       $("#gallery-btn-text").show();
       $("#gallery-loader").hide();
 
-      if ($grid.children().length > 30) {
+      if ($grid.children().length > 1) {
         $(".gallery-btn").hide();
       }
     }, getRandomInt(3, 10) * 100);
